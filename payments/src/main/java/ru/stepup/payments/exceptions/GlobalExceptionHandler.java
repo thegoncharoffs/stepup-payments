@@ -10,7 +10,7 @@ import ru.stepup.payments.dtos.ErrorDto;
 public class GlobalExceptionHandler {
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ErrorDto> handleResourceNotFoundException(ResourceNotFoundException e) {
-        return new ResponseEntity<>(new ErrorDto("RESOURCE_NOT_FOUND", e.getMessage()), HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(new ErrorDto(e.getCode(), e.getMessage()), HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(BadRequestException.class)

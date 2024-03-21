@@ -10,10 +10,7 @@ import ru.stepup.products.enums.ProductType;
 @AllArgsConstructor
 public class ProductDto {
     private Long id;
-
     private Long accountNumber;
-
     private Long balance;
-
     private ProductType type;
 }

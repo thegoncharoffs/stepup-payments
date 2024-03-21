@@ -21,11 +21,8 @@ public class PaymentsService {
             throw new BadRequestException("LOW_BALANCE", "Low balance");
         }
 
-        // Set new balance
-        productDto.setBalance(productDto.getBalance() - executePaymentDtoRq.getPrice());
-
         // Update product balance
-        productsIntegration.execute(productDto, userId);
+        productsIntegration.execute(executePaymentDtoRq, userId);
     }
 
 }

@@ -10,7 +10,7 @@ public class ProductMapper {
                 .id(productDto.getId())
                 .accountNumber(productDto.getAccountNumber())
                 .balance(productDto.getBalance())
-                .type(productDto.getType().toString().toLowerCase())
+                .type(productDto.getType())
                 .build();
     }
 
@@ -19,7 +19,7 @@ public class ProductMapper {
                 .id(productEntity.getId())
                 .accountNumber(productEntity.getAccountNumber())
                 .balance(productEntity.getBalance())
-                .type(ProductType.valueOf(productEntity.getType().toUpperCase()))
+                .type(productEntity.getType())
                 .build();
     }
 }

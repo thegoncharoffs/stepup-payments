@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.stepup.products.enums.ProductType;
 
 @Data
 @Builder
@@ -25,5 +26,5 @@ public class ProductEntity {
     private Long balance;
 
     @Column(name = "type")
-    private String type;
+    private ProductType type;
 }

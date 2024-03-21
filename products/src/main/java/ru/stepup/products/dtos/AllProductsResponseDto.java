@@ -8,9 +8,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @Builder
-@Data
 public class AllProductsResponseDto {
-    List<ProductDto> list;
-
-    int total;
+    private List<ProductDto> list;
+    private int total;
 }

@@ -10,7 +10,6 @@ public class ErrorDto {
     private String message;
     private LocalDateTime date;
 
-
     public ErrorDto(String code, String message) {
         this.code = code;
         this.message = message;

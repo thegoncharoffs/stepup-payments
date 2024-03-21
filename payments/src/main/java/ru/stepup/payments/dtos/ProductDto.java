@@ -9,10 +9,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class ProductDto {
     private Long id;
-
     private Long accountNumber;
-
     private Long balance;
-
     private String type;
 }
