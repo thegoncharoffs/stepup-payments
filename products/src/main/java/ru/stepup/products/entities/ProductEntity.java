@@ -26,5 +26,6 @@ public class ProductEntity {
     private Long balance;
 
     @Column(name = "type")
+    @Enumerated(EnumType.STRING)
     private ProductType type;
 }

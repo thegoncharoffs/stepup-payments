@@ -3,11 +3,9 @@ package ru.stepup.payments.integrations;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.*;
-import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import ru.stepup.payments.dtos.ExecutePaymentDtoRq;
 import ru.stepup.payments.dtos.ProductDto;
-import ru.stepup.payments.exceptions.IntegrationException;
 
 import java.util.Collections;
 
@@ -16,7 +14,7 @@ import java.util.Collections;
 public class ProductsIntegration {
     private final RestTemplate restTemplate;
 
-    public ProductDto getProductById(String id, String userId) {
+    public ProductDto getProductById(long id, String userId) {
         // Set headers
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
