@@ -17,3 +17,5 @@ spring:
       enabled: true
       settings:
         web-allow-others: false
+cron:
+  reset-limits: "0 0 0 * * *"
