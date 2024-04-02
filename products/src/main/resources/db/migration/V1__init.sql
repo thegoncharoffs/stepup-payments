@@ -1,7 +1,7 @@
 create table products (
     id bigserial primary key,
-    account_number bigserial,
-    balance bigserial,
+    account_number integer,
+    balance integer,
     type varchar(255)
 );
 
