@@ -23,7 +23,7 @@ public class LimitsController {
         Optional<LimitEntity> limitEntityOptional = limitsService.findById(userId);
 
         if (limitEntityOptional.isEmpty()) {
-            throw new ResourceNotFoundException("LIMIT_NOT_FOUND", "Limit is exceeded");
+            throw new ResourceNotFoundException("LIMIT_NOT_FOUND", "Limit not found");
         }
 
         LimitDto limitDto = new LimitDto(limitEntityOptional.get().getUserId(), limitEntityOptional.get().getPaymentLimit());

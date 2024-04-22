@@ -19,3 +19,5 @@ spring:
         web-allow-others: false
 cron:
   reset-limits: "0 0 0 * * *"
+payments:
+  limit: 10_000L
