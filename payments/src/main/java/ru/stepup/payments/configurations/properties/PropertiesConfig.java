@@ -5,7 +5,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableConfigurationProperties({
-        ProductsProperties.class
+        ProductsProperties.class,
+        LimitsProperties.class
 })
 public class PropertiesConfig {
 }

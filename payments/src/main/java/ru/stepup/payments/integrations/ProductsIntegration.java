@@ -14,11 +14,11 @@ import java.util.Collections;
 public class ProductsIntegration {
     private final RestTemplate restTemplate;
 
-    public ProductDto getProductById(long id, String userId) {
+    public ProductDto getProductById(long id, Long userId) {
         // Set headers
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
-        httpHeaders.set("USERID", userId);
+        httpHeaders.set("USERID", userId.toString());
         HttpEntity<Void> requestEntity = new HttpEntity<>(httpHeaders);
 
         // Send request
@@ -33,11 +33,11 @@ public class ProductsIntegration {
         return responseEntity.getBody();
     }
 
-    public void execute(ExecutePaymentDtoRq executePaymentDtoRq, String userId) {
+    public void execute(ExecutePaymentDtoRq executePaymentDtoRq, Long userId) {
         // Set headers and body
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
-        httpHeaders.set("USERID", userId);
+        httpHeaders.set("USERID", userId.toString());
         HttpEntity<ExecutePaymentDtoRq> request = new HttpEntity<>(executePaymentDtoRq, httpHeaders);
 
         // Send request

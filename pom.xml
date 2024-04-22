@@ -19,6 +19,7 @@
     <modules>
         <module>products</module>
         <module>payments</module>
+        <module>limits</module>
     </modules>
 
     <properties>

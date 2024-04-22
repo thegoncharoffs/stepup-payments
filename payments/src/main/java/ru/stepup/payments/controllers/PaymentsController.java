@@ -13,7 +13,7 @@ public class PaymentsController {
     private final PaymentsService paymentsService;
 
     @PostMapping("/execute")
-    public void execute(@RequestBody ExecutePaymentDtoRq executePaymentDtoRq, @RequestHeader("USERID") String userId) {
+    public void execute(@RequestBody ExecutePaymentDtoRq executePaymentDtoRq, @RequestHeader("USERID") long userId) {
         paymentsService.execute(executePaymentDtoRq, userId);
     }
 }

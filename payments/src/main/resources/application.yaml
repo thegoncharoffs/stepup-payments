@@ -9,3 +9,8 @@ integrations:
       url: "http://localhost:8081/api/v1"
       connect-timeout: 1s
       read-timeout: 30s
+  limits-v1:
+    client:
+      url: "http://localhost:8082/api/v1"
+      connect-timeout: 1s
+      read-timeout: 30s
